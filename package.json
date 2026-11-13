@@ -1,0 +1,7 @@
+{
+  "name": "softpixels-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "dev": "node server.mjs", "check": "node --check dist/app.js && node --check server.mjs" },
+  "description": "SoftPixels studio website — responsive, dependency-free static site"
+}
