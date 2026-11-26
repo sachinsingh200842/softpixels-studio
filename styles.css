@@ -47,3 +47,98 @@
 @media(max-width:380px){.error-actions{flex-direction:column}.error-actions .button{width:100%;justify-content:space-between}.error-footnote{letter-spacing:.45px}}
 /* Center the DefendHer hero within the existing compact project frame. */
 .real-project img[src$="defendher-live.png"]{object-position:center}
+
+/* Scroll Craft's flow timeline brings the editor and its preview into register. */
+@media (prefers-reduced-motion: no-preference) {
+  .sc-ready .hero-art {
+    --settle: clamp(0, calc(1.25 - var(--sc-p, 0.5) * 2), 1);
+  }
+
+  .sc-ready .workspace {
+    transform-origin: center 70%;
+    transform: perspective(1200px) translateY(calc(34px * var(--settle)))
+      rotateX(calc(9deg * var(--settle))) scale(calc(1 - 0.055 * var(--settle)));
+  }
+
+  .sc-ready .pixel-field {
+    translate: 0 calc(-54px * var(--sc-p));
+  }
+
+  .sc-ready .floating-note {
+    translate: 0 calc(-24px * var(--settle));
+    pointer-events: none;
+  }
+
+  .sc-ready .orbit-art {
+    rotate: calc(-36deg * var(--settle));
+  }
+
+  .sc-ready .real-project img {
+    object-position: center clamp(0%, calc(var(--sc-p) * 165% - 32%), 100%);
+  }
+}
+
+@media (max-width: 760px) and (prefers-reduced-motion: no-preference) {
+  .sc-ready .workspace {
+    transform: translateY(calc(16px * var(--settle))) scale(calc(1 - 0.025 * var(--settle)));
+  }
+
+  .sc-ready .real-project img {
+    /* The crop changes axis between portrait and landscape. */
+    object-position: clamp(26%, calc(18% + var(--sc-p) * 56%), 74%)
+      clamp(0%, calc(var(--sc-p) * 165% - 32%), 100%);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-art .pixel-field {
+    inset-inline: 0;
+  }
+
+  .footer-bottom > div {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .hero-art .floating-note {
+    position: relative;
+    inset: auto;
+    width: fit-content;
+    margin: 10px 0 0 auto;
+    transform: none;
+    translate: none;
+  }
+}
+
+.project-jumps { display: flex; align-items: center; gap: 1.5rem; }
+.project-jumps a { padding-block: .65rem; text-decoration: underline; text-underline-offset: .3em; }
+.project-feature {
+  scroll-margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 5vw, 4rem);
+  overflow: hidden;
+  border: 1px solid #303c42;
+  border-radius: 12px;
+}
+.pixelwalls-feature { margin-top: clamp(2rem, 5vw, 4rem); background: linear-gradient(120deg, #10191b, #223c3c); }
+.defendher-feature { background: linear-gradient(120deg, #20191e, #412b34); border-color: #46333c; }
+.defendher-preview { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 12px 24px #0005; }
+@media (prefers-reduced-motion: no-preference) {
+  .sc-ready .defendher-preview { translate: 0 calc((.5 - var(--sc-p)) * 24px); }
+}
+.feature-copy h3 { margin-block: .65rem; font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1.04; letter-spacing: -.055em; }
+.feature-copy p { max-width: 38ch; color: #c4d3d2; line-height: 1.6; }
+.feature-copy a { margin-top: 1.5rem; }
+.pixelwalls-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5%; padding-block: 1rem; }
+.pixelwalls-screens img { width: 100%; height: auto; border-radius: 8%; box-shadow: 0 12px 24px #0005; }
+.pixelwalls-screens img:first-child { align-self: start; margin-top: 12%; }
+@media (prefers-reduced-motion: no-preference) {
+  .sc-ready .pixelwalls-screens img:last-child { translate: 0 calc((.5 - var(--sc-p)) * 36px); }
+}
+@media (max-width: 760px) {
+  .project-feature { grid-template-columns: 1fr; }
+  .pixelwalls-screens { max-width: 25rem; margin-inline: auto; }
+}

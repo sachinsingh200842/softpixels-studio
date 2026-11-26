@@ -7,7 +7,9 @@
   <meta name="description" content="SoftPixels builds thoughtful websites, web applications, Android apps, and digital experiences. From the first idea to the final pixel.">
   <meta property="og:title" content="SoftPixels — Websites & Web Application Development"><meta property="og:description" content="Websites, web applications, and UI/UX design for businesses and founders. Explore our work and discuss your project."><meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/assets/scrollcraft/scrollcraft.js" defer></script>
+  <script src="/app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,7 +27,7 @@
       <h1 id="hero-title">Thoughtfully designed.<br><span>Beautifully built.</span></h1>
       <p class="hero-description">We build websites, web applications, and interfaces<br class="desktop-break"> that turn your next idea into a useful digital experience.</p>
       <div class="hero-actions"><a class="button button-primary" href="#work">Explore our work <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#contact">Start a project <span aria-hidden="true">→</span></a></div>
-      <div class="hero-art">
+      <div class="hero-art" data-sc-act="flow">
         <div class="ambient ambient-blue"></div><div class="pixel-field" aria-hidden="true"></div>
         <div class="workspace">
           <div class="workspace-chrome"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="workspace-title">softpixels / your-next-big-idea · illustrative code</span><span class="branch"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="4" cy="3" r="1.5"/><circle cx="12" cy="4" r="1.5"/><circle cx="4" cy="13" r="1.5"/><path d="M4 4.5v7M12 5.5v1A4 4 0 0 1 8 10H4"/></svg>main</span></div>
@@ -68,7 +70,6 @@
         </div>
         <div class="floating-note"><span class="note-icon" aria-hidden="true">✓</span><div>Good design. Great engineering.<small>One seamless experience.</small></div></div>
       </div>
-      <div class="hero-footnote"><span>DESIGN MEETS DEVELOPMENT</span><span class="footnote-line"></span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
     </section>
     <section class="services section wrap" id="services" aria-labelledby="services-title">
       <div class="section-intro"><div><span class="eyebrow">01 / WHAT WE DO</span><h2 id="services-title">From the first idea.<br><span>To the final pixel.</span></h2></div><p>Design and development, working together.<br> Everything your next digital product needs,<br class="desktop-break"> with nothing getting in the way.</p></div>
@@ -81,14 +82,29 @@
       <div class="stack-strip"><span>OUR EVERYDAY TOOLKIT</span><div><span>HTML & CSS</span><span>JavaScript</span><span>PHP</span><span>SQL</span><span>Firebase</span><span>Git & GitHub</span></div></div>
     </section>
     <section class="work section wrap" id="work" aria-labelledby="work-title">
-      <div class="section-intro"><div><span class="eyebrow">02 / FEATURED PROJECT</span><h2 id="work-title">DefendHer.<br><span>Designed for her everyday.</span></h2></div><p>A brand launch website for discreet tools<br> and everyday commuter essentials.</p></div>
-      <figure class="real-project">
-        <a href="https://defendher.softpixels.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit the DefendHer website, opens in a new tab"><div class="real-project-bar"><span>defendher.softpixels.in</span><span>Open live website ↗</span></div><img src="/assets/defendher-live.png" alt="DefendHer website with its every her deserves defense headline and pink everyday-carry product design" width="1280" height="720" loading="lazy"></a>
-        <figcaption>Actual DefendHer website · Brand launch preview</figcaption>
-      </figure>
-      <div class="project-caption"><div><h3>DefendHer</h3><p>Brand website · Coming-soon launch experience</p></div><div class="tags"><span>Brand website</span><span>Responsive design</span><span>Product showcase</span></div></div>
-      <div class="case-study"><article><span class="eyebrow">THE BRAND</span><h3>Every her deserves defense.</h3><p>Introducing DefendHer’s direction for discreet tools and commuter essentials, built around everyday carry.</p></article><article><span class="eyebrow">THE EXPERIENCE</span><h3>A considered first impression.</h3><p>A visual product showcase, the brand story, frequently asked questions, and a clear way to follow the launch.</p></article><article><span class="eyebrow">THE STAGE</span><h3>A coming-soon website.</h3><p>Product images show design previews. Final specifications, pricing, and launch details will be shared by DefendHer when confirmed.</p></article></div>
-      <a class="text-link project-live-link" href="https://defendher.softpixels.in/" target="_blank" rel="noopener noreferrer">Explore the DefendHer website <span aria-hidden="true">↗</span></a>
+      <div class="section-intro"><div><span class="eyebrow">02 / OUR WORK</span><h2 id="work-title">Featured projects.</h2></div>
+        <nav class="project-jumps" aria-label="Featured projects"><a href="#defendher">DefendHer</a><a href="#pixelwalls">PixelWalls</a></nav></div>
+      <article id="defendher" class="project-feature defendher-feature" data-sc-act="flow" aria-labelledby="defendher-title">
+        <div class="feature-copy">
+          <span class="eyebrow">BRAND WEBSITE</span>
+          <h3 id="defendher-title">DefendHer</h3>
+          <p>A launch website for a collection of everyday safety accessories.</p>
+          <a class="button button-primary" href="https://defendher.softpixels.in/" target="_blank" rel="noopener noreferrer">Visit website</a>
+        </div>
+        <img class="defendher-preview" src="/assets/defendher-live.png" alt="DefendHer launch page featuring its pink everyday-carry kit" width="1280" height="720" loading="lazy">
+      </article>
+      <article id="pixelwalls" class="project-feature pixelwalls-feature" data-sc-act="flow" aria-labelledby="pixelwalls-title">
+        <div class="feature-copy">
+          <span class="eyebrow">ANDROID APP</span>
+          <h3 id="pixelwalls-title">PixelWalls</h3>
+          <p>Browse wallpapers by style, save your favourites, and preview a new look before setting it on your home or lock screen.</p>
+          <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.pixelwalls">View on Google Play</a>
+        </div>
+        <div class="pixelwalls-screens">
+          <img src="/assets/pixelwalls-explore.jpg" width="405" height="720" loading="lazy" alt="PixelWalls Explore screen with popular wallpapers">
+          <img src="/assets/pixelwalls-nature.jpg" width="405" height="720" loading="lazy" alt="Nature wallpaper collection in PixelWalls">
+        </div>
+      </article>
     </section>
     <section class="studio section" id="studio" aria-labelledby="studio-title"><div class="wrap studio-grid"><div class="studio-illustration" aria-hidden="true"><div class="studio-grid-lines"></div><div class="giant-pixels"><i></i><i></i><i></i><i></i></div><span class="illustration-caption">SMALL DETAILS. MEANINGFUL DIFFERENCE.</span></div><div class="studio-copy"><span class="eyebrow">03 / THE STUDIO</span><h2 id="studio-title">Small by choice.<br><span>Thoughtful by nature.</span></h2><p>We’re SoftPixels, a digital studio founded in 2023. We turn ideas into practical products with thoughtful design and modern web technologies.</p><p>We believe the best technology makes life simpler. So we ask better questions, care about the details, and build things that are genuinely useful.</p><div class="studio-principles"><span><i>↗</i> Purpose before pixels</span><span><i>⌘</i> Design and code, together</span><span><i>✧</i> A little better, every iteration</span></div><a class="text-link" href="#contact">Meet your next creative partner <span>↗</span></a></div></div></section>
     <section class="process section wrap" id="process" aria-labelledby="process-title"><div class="section-intro"><div><span class="eyebrow">04 / HOW WE WORK</span><h2 id="process-title">A clear process.<br><span>A better outcome.</span></h2></div><p>No mystery. No unnecessary complexity.<br> Just thoughtful collaboration,<br class="desktop-break"> from start to shipped.</p></div><div class="process-grid"><article><span class="process-index">01 <i></i></span><h3>Understand</h3><p>We start with a conversation. Your goals, your audience, and the problem worth solving.</p><span class="process-tag">The right questions</span></article><article><span class="process-index">02 <i></i></span><h3>Shape</h3><p>We turn the idea into a clear direction, with considered layouts and a shared plan.</p><span class="process-tag">A thoughtful direction</span></article><article><span class="process-index">03 <i></i></span><h3>Build</h3><p>Design meets development. We bring the details to life, with your feedback along the way.</p><span class="process-tag">Care in every commit</span></article><article><span class="process-index">04 <i></i></span><h3>Refine & launch</h3><p>We test, polish, and get it ready for the world. Then keep learning and improving.</p><span class="process-tag">Ready for what’s next</span></article></div></section>

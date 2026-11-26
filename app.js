@@ -56,3 +56,17 @@ contactForm.addEventListener('submit',async event=>{
  }catch(error){formStatus.className='form-status error';formStatus.replaceChildren(document.createTextNode('Your message couldn’t be sent. Please try again, or '));const fallback=document.createElement('a');fallback.href='https://www.instagram.com/irl.sachin/';fallback.target='_blank';fallback.rel='noopener noreferrer';fallback.textContent='message us on Instagram';formStatus.append(fallback,document.createTextNode(' or email '));const emailFallback=document.createElement('a');emailFallback.href='mailto:softpixels01@gmail.com';emailFallback.textContent='softpixels01@gmail.com';formStatus.append(emailFallback,document.createTextNode('. Your draft is still here.'));}
  finally{clearTimeout(timeout);submitButton.disabled=false;submitButton.innerHTML='Send your idea <span aria-hidden="true">↗</span>';}
 });
+
+// The homepage illustrations use the flow progress from Scroll Craft.
+const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+let scrollScene;
+function syncScrollMotion() {
+  if (motionPreference.matches) {
+    scrollScene?.destroy();
+    scrollScene = undefined;
+  } else if (!scrollScene && window.ScrollCraft) {
+    scrollScene = window.ScrollCraft.mount(document.getElementById('main'));
+  }
+}
+syncScrollMotion();
+motionPreference.addEventListener('change', syncScrollMotion);
